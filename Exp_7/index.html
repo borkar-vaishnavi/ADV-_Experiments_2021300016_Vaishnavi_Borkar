@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Data Dashboard</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            color: #495057;
+            margin-bottom: 20px;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .chart {
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 700px;
+            height: 500px;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Loan Data Analysis Dashboard</h1>
+
+    <label for="chartType">Select Chart Type:</label>
+    <select id="chartType">
+        <option value="barChart">Bar Chart (Loan Status)</option>
+        <option value="pieChart">Pie Chart (Home Ownership)</option>
+        <option value="histogram">Histogram (Credit Score)</option>
+        <option value="scatterPlot">Scatter Plot (Income vs Loan Amount)</option>
+    </select>
+
+    <div class="chart-container">
+        <div class="chart" id="chart">
+            <svg id="chartSvg" width="700" height="500"></svg>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
